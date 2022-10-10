@@ -7,16 +7,21 @@ function DeveloperList(props) {
     return props.devList.length ? (
        <div className='table-box'>
          <h3>Developers List</h3>
-                <table ><tr>
+                <table >
+                    <thead>
+                    <tr>
                     <th> Name</th>
                     <th> Language</th>
                     <th> technology</th>
                     <th> drink</th>
                     <th> food</th>
                 </tr>
+               </thead>
+               <tbody>
                     {props.devList.map(dev => (
                         <Developer key={dev.id} dev={dev} dispatch={props.dispatch} />
                     ))}
+                    </tbody>
 
 
                 </table>
