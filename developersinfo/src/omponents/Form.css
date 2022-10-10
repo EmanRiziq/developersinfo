@@ -31,7 +31,7 @@ select {
     border-radius: 10px;
     font-size: 20px;
     background-color: #ede7e3;
-    color: #ffa62b;
+    /* color: #ffa62b; */
 }
 
 .form-box button {

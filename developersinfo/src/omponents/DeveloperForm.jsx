@@ -27,16 +27,16 @@ function DeveloperForm(props) {
             <h5 className="form-step"> enter your informations please </h5>
 
             <form onSubmit={handleSubmit}>
-                <input required={true} placeholder="Developer\'s name" type="text" onChange={(e) => setName(e.target.value)} value={name} />
+                <input required={true} placeholder="Developer's name" type="text" onChange={(e) => setName(e.target.value)} value={name} />
+
                 <select name="Programming language" onChange={(e) => setLanguage(e.target.value)} value={language} >
-                    {/* <option disabled={true} value="">  Programming language </option> */}
+                    <option disabled={true} value="">  Programming language </option>
                     {languagesArr.map((n, idx) => {
                         return (<option key={idx} value={n}>{n}</option>);
                     })}
                 </select>
 
-              
-                <select placeholder='Technologies' name="Technologies" onChange={(e) => setTech(e.target.value)} value={tech} >
+                <select name="Technologies" onChange={(e) => setTech(e.target.value)} value={tech} >
                     <option disabled={true} value="">  Technologies </option>
                     {techArr.map((n, idx) => {
                         return (<option key={idx} value={n}>{n}</option>);
